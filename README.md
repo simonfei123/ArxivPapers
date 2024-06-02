@@ -53,8 +53,19 @@ and also text chunks to page blocks.
 - Google Text-to-Speech (https://cloud.google.com/text-to-speech)
 - Google Drive setup (optional, follow https://github.com/iterative/PyDrive2)
 
+```
+gcloud auth login
+gcloud init
+gcloud auth application-default login
+```
+
 ## Python Packages
 openai, PyPDF2, spacy, tiktoken, pyperclip, google-cloud-texttospeech, pydrive2, pdflatex
+
+```
+pip install -r requirement.txt
+python -m spacy download en_core_web_lg
+```
 
 ## How to run
 

@@ -1,0 +1,7 @@
+# Ignore everything in this directory
+*
+# Except the following files
+!.gitignore
+!requirement.txt
+!main.py
+!README.md

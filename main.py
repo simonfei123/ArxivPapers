@@ -274,7 +274,7 @@ def main(args):
              upper_top=3, top_percent=25, left_percent=12, right_percent=7)
 
     zip_files(files_dir, args.gs, args.ffmpeg,
-              args.create_short, args.create_video, args.final_audio_file,
+              args.create_short, args.create_qa, args.create_video, args.final_audio_file,
               args.chunk_mp3_file_list, display)
 
 
@@ -303,7 +303,8 @@ if __name__ == "__main__":
     parser.add_argument("--create_qa", action="store_true", help="create qa video")
     parser.add_argument("--create_audio_simple", action="store_true", help="create audio")
     parser.add_argument("--openai_key", type=str, default="", help='openai key to call GPT API')
-    parser.add_argument("--llm_strong", type=str, default="gpt-4-0125-preview", help='llm model for complex tasks')
+    # parser.add_argument("--llm_strong", type=str, default="gpt-4-0125-preview", help='llm model for complex tasks')
+    parser.add_argument("--llm_strong", type=str, default="gpt-3.5-turbo-0125", help='llm model for complex tasks')
     parser.add_argument("--llm_base", type=str, default="gpt-3.5-turbo-0125", help='llm model for basic tasks')
 
     args = parser.parse_args()
