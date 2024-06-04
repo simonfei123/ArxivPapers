@@ -148,7 +148,7 @@ def main(args):
     outvideo.close()
 
     # joint video
-    os.system(f'{args.ffmpeg} -f concat -i {os.path.join(dr, "mp4_list.txt")} -y -c copy {os.path.join(dr, "output.mp4")}')
+    os.system(f'{args.ffmpeg} -f concat -i {os.path.join(dr, "mp4_list.txt")} -y -c copy {os.path.join(dr, f"output_{args.paperid}.mp4")}')
 
     # =============== SHORT VIDEO ====================
 
@@ -197,7 +197,7 @@ def main(args):
 
         # joint video
         os.system(f'{args.ffmpeg} -f concat -i {os.path.join(dr, "short_mp4_list.txt")} '
-                  f'-y -c copy {os.path.join(dr, "output_short.mp4")}')
+                  f'-y -c copy {os.path.join(dr, f"output_short_{args.paperid}.mp4")}')
 
     # =============== QA VIDEO ====================
 
